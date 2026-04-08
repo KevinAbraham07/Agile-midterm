@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-management-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-management-app
+  template:
+    metadata:
+      labels:
+        app: todo-management-app
+    spec:
+      containers:
+        - name: todo-management-app
+          image: kevinabraham28/todo-management-app:latest
